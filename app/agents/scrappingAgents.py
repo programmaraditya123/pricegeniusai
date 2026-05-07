@@ -1,0 +1,1 @@
+# here we made the scrapping agents to scarp different platforms
