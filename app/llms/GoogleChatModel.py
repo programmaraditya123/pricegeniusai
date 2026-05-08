@@ -8,5 +8,6 @@ llm = ChatGoogleGenerativeAI(
     temperature = 0
 )
 
-def googleModelInvoke(message : string):
-    return llm.invoke(message)
+def googleModelInvoke(prompt : str):
+    response =  llm.invoke(prompt)
+    return response.content
