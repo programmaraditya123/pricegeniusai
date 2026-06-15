@@ -3,6 +3,17 @@ uvicorn[standard]
 pydantic
 pydantic-settings
 python-dotenv
+sqlalchemy[asyncio]
+asyncpg
+alembic
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt<5
+email-validator
+pytest
+pytest-asyncio
+aiosqlite
+mcp
 
 langchain
 langgraph

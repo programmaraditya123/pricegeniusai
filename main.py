@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from app.routes.llm_routes import router as llm_router
+from app.expense_tracker.router import router as expense_tracker_router
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
@@ -16,6 +17,7 @@ app.add_middleware(
 )
 
 app.include_router(llm_router,prefix="/api/v1",tags=["compare products"])
+app.include_router(expense_tracker_router, prefix="/api/v1")
 
 @app.get("/")
 def home():
